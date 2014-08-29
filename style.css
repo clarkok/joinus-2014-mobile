@@ -14,8 +14,17 @@ body {
   background-color: #eee;
   top: -100%;
 }
-.page:target {
+.page:target .circle {
   top: 0;
+}
+.page:target .circle .text-wrapper {
+  top: 0;
+}
+.page:target .circle .text-wrapper:after {
+  opacity: 1;
+}
+.page:target .circle .dep-logo {
+  bottom: 0;
 }
 .page#intro .positioner {
   width: 0;
@@ -102,12 +111,13 @@ body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  top: 0;
+  top: -70vh;
   left: 0;
   overflow-y: auto;
   overflow-x: hidden;
 }
 .page .circle .text-wrapper:after {
+  opacity: 0;
   content: " ";
   display: block;
   position: fixed;
@@ -124,7 +134,7 @@ body {
   position: fixed;
   width: 100%;
   height: 20vh;
-  bottom: 0;
+  bottom: -20vh;
   left: 0;
   background-size: contain;
   background-repeat: no-repeat;
