@@ -143,3 +143,24 @@ body {
 .page#hr .dep-logo {
   background-image: url("imgs/hr.png");
 }
+.page#photo .dep-logo {
+  background-image: url("imgs/photo.png");
+}
+.page#news .dep-logo {
+  background-image: url("imgs/news.png");
+}
+.page#video .dep-logo {
+  background-image: url("imgs/video.png");
+}
+.page#outreach .dep-logo {
+  background-image: url("imgs/outreach.png");
+}
+.page#tide .dep-logo {
+  background-image: url("imgs/tide.png");
+}
+.page#tech .dep-logo {
+  background-image: url("imgs/tech.png");
+}
+.page#pm .dep-logo {
+  background-image: url("imgs/pm.png");
+}
