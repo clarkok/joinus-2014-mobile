@@ -48,34 +48,34 @@ body {
   margin-left: -2em;
 }
 .page#intro .positioner .item#link-hr {
-  top: -5em;
+  top: -25vmin;
   left: 0;
 }
 .page#intro .positioner .item#link-photo {
-  top: -3.535em;
-  left: 3.535em;
+  top: -17.675vmin;
+  left: 17.675vmin;
 }
 .page#intro .positioner .item#link-news {
   top: 0;
-  left: 5em;
+  left: 25vmin;
 }
 .page#intro .positioner .item#link-video {
-  top: 3.535em;
-  left: 3.535em;
+  top: 17.675vmin;
+  left: 17.675vmin;
 }
 .page#intro .positioner .item#link-outreach {
-  top: 5em;
+  top: 25vmin;
   left: 0;
 }
 .page#intro .positioner .item#link-tide {
-  top: 3.535em;
-  left: -3.535em;
+  top: 17.675vmin;
+  left: -17.675vmin;
 }
 .page#intro .positioner .item#link-tech {
   top: 0;
-  left: -5em;
+  left: -25vmin;
 }
 .page#intro .positioner .item#link-pm {
-  top: -3.535em;
-  left: -3.535em;
+  top: -17.675vmin;
+  left: -17.675vmin;
 }
