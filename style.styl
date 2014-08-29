@@ -234,13 +234,21 @@ html, body
       .input
         display block
         width 100%
+        padding .5em
       .input-text
         border-bottom 2px solid black
         position relative
-        .label
+        label
           position absolute
           color grey
+          bottom .5em
+          left .5em
         input[type=text]
+          display block
+          margin 0
           width 100%
+          box-sizing border-box
+          padding 0
+          font-size 1em
           background-color transparent
           border 0
