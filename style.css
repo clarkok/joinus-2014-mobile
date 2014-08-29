@@ -103,3 +103,14 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
 }
+.page .circle .text-wrapper:after {
+  display: block;
+  position: absolute;
+  height: 30%;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(0deg, rgba(255,255,255,0), #fff);
+  background: -ms-linear-gradient(0deg, rgba(255,255,255,0), #fff);
+  background: -moz-linear-gradient(0deg, rgba(255,255,255,0), #fff);
+  background: -webkit-linear-gradient(0deg, rgba(255,255,255,0), #fff);
+}

@@ -8,6 +8,12 @@ box-sizing()
   -moz-box-sizing: arguments
   box-sizing: arguments
 
+gradient-bg(angle, from, to)
+  background linear-gradient(angle, from, to)
+  background -ms-linear-gradient(angle, from, to)
+  background -moz-linear-gradient(angle, from, to)
+  background -webkit-linear-gradient(angle, from, to)
+
 html, body
   margin 0
   padding 0
@@ -108,3 +114,13 @@ html, body
       left 0
       overflow-y auto
       overflow-x hidden
+      &:after
+        display block
+        position absolute
+        height 30%
+        bottom 0
+        left 0
+        background linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
+        background -ms-linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
+        background -moz-linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
+        background -webkit-linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
