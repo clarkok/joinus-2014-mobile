@@ -70,3 +70,95 @@ html(lang="zh")
             h2 产品运营部门
             p 产品运营部门隶属求是潮工作团队，着眼运营维护与宣传推广求是潮旗下Mobile、Notice、Share、Box四大互联网产品，并且持续积极孕育新的产品。产品运营部门的工作贯穿产品从出生成长到发展完善的全过程，我们设计全新的产品原型，收集用户对产品的体验，举办各色各样以推广产品为中心的活动，为产品有序鲜活地存在坚持维护，让我们的产品走进所有师生的生活。随着移动互联网的发展，我们意识到它的巨大潜力，更着力于移动终端app市场，踩着浪潮前进。我们是产品经理，我们勇于创新，乐于服务，我们渴望创造属于我们自己的奇迹，我们希望，同学们在浙大的生活因我们的产品而更加美好。
         .dep-logo
+    .page#joinus
+      .circle-big
+        form#joinus-wrapper
+          input#input-fill(type="hide", name="fill-duration")
+          input#input-view(type="hide", name="view-duration")
+          .line
+            .input.note
+              p 欢迎来到求是潮报名页面
+              ol
+                li 带有 “*” 的内容为必填项
+                li 请记牢自己所填的姓名，学号和邮箱，在任意电脑输入以上信息即可以再次编辑上次提交的内容
+          .line
+            .input.input-text#input-name
+              label 姓名*
+              input(type="text", name="name")
+            .input.right.input-select#input-gender
+              ul.choses
+                li.option.checked(data-value="0") 性别
+                li.option(data-value="1") 男生
+                li.option(data-value="2") 女生
+              input(type="hidden", name="gender", value="0")
+          .line
+            .input.input-text#input-long
+              label 长号*
+              input(type="text", name="long")
+            .input.right.input-text#input-short
+              label 短号
+              input(type="text", name="short")
+          .line
+            .input.input-text#input-email
+              label Email*
+              input(type="text", name="email")
+          .line
+            .input.input-text#input-id
+              label 学号*
+              input(type="text", name="id")
+          .line
+            .input.input-text#input-grade
+              label 年级
+              input(type="text", name="grade")
+            .input.right.input-text#input-class
+              label 大类
+              input(type="text", name="class")
+          .line
+            .input.input-select#input-first-chose
+              ul.choses
+                li.option.checked(data-value="0") 第一志愿*
+                li.option(data-value="1") 人力资源部门
+                li.option(data-value="2") 摄影部
+                li.option(data-value="3") 新闻资讯中心
+                li.option(data-value="4") 视频团队
+                li.option(data-value="5") 推广策划中心
+                li.option(data-value="6") 水朝夕工作室
+                li.option(data-value="7") 技术研发中心（设计师）
+                li.option(data-value="8") 技术研发中心（工程师）
+                li.option(data-value="9") 产品运营部门
+              input(type="hidden", name="first-chose", value="0")
+          .line
+            .input.input-select#input-second-chose
+              ul.choses
+                li.option.checked(data-value="0") 第二志愿  
+                li.option(data-value="1") 人力资源部门
+                li.option(data-value="2") 摄影部
+                li.option(data-value="3") 新闻资讯中心
+                li.option(data-value="4") 视频团队
+                li.option(data-value="5") 推广策划中心
+                li.option(data-value="6") 水朝夕工作室
+                li.option(data-value="7") 技术研发中心（设计师）
+                li.option(data-value="8") 技术研发中心（工程师）
+                li.option(data-value="9") 产品运营部门
+              input(type="hidden", name="second-chose", value="0")
+          .line
+            .input.input-textarea#input-question1
+              label(for="self-intro").prompt 自我介绍
+              textarea#self-intro(name="question1")
+          .line
+            .input.input-textarea#input-question2
+              label(for="question1").prompt 请谈谈你对求是潮的第一印象
+              textarea#question1(name="question2")
+          .line
+            .input.input-textarea#input-question3
+              label(for="question2").prompt 请谈谈你对所报部门的认识
+              textarea#question2(name="question3")
+          .line
+            .input.input-file#input-file
+              .prompt 你可以上传任何能展示你的作品
+                .button +
+              .ul#list
+              input(type="file", name="upload[]", for="file-upload", multiple)
+          .line
+            .input.input-submit
+              .button 提交

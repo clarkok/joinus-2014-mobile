@@ -170,3 +170,11 @@ body {
 .page#pm .dep-logo {
   background-image: url("imgs/pm.png");
 }
+#joinus .circle-big {
+  width: 200vh;
+  height: 200vh;
+  border-radius: 100vh;
+  bottom: -20vh;
+  position: absolute;
+  background-color: #fff;
+}
