@@ -48,34 +48,34 @@ body {
   margin-left: -2em;
 }
 .page#intro .positioner .item#link-hr {
-  top: -40vmin;
+  top: -35vmin;
   left: 0;
 }
 .page#intro .positioner .item#link-photo {
-  top: -28.279999999999998vmin;
-  left: 28.279999999999998vmin;
+  top: -24.744999999999997vmin;
+  left: 24.744999999999997vmin;
 }
 .page#intro .positioner .item#link-news {
   top: 0;
-  left: 40vmin;
+  left: 35vmin;
 }
 .page#intro .positioner .item#link-video {
-  top: 28.279999999999998vmin;
-  left: 28.279999999999998vmin;
+  top: 24.744999999999997vmin;
+  left: 24.744999999999997vmin;
 }
 .page#intro .positioner .item#link-outreach {
-  top: 40vmin;
+  top: 35vmin;
   left: 0;
 }
 .page#intro .positioner .item#link-tide {
-  top: 28.279999999999998vmin;
-  left: -28.279999999999998vmin;
+  top: 24.744999999999997vmin;
+  left: -24.744999999999997vmin;
 }
 .page#intro .positioner .item#link-tech {
   top: 0;
-  left: -40vmin;
+  left: -35vmin;
 }
 .page#intro .positioner .item#link-pm {
-  top: -28.279999999999998vmin;
-  left: -28.279999999999998vmin;
+  top: -24.744999999999997vmin;
+  left: -24.744999999999997vmin;
 }
