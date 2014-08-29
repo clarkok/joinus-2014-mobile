@@ -181,6 +181,9 @@ body {
 #joinus:target #joinus-wrapper {
   bottom: 0;
 }
+#joinus:target #joinus-wrapper:before {
+  opacity: 1;
+}
 #joinus .circle-big {
   width: 200vh;
   height: 200vh;
@@ -204,4 +207,15 @@ body {
   box-sizing: border-box;
   overflow-y: auto;
   overflow-x: hidden;
+}
+#joinus #joinus-wrapper:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  height: 1em;
+  opacity: 0;
+  background: linear-gradient(90deg, rgba(255,255,255,0), #fff);
+  background: -ms-linear-gradient(90deg, rgba(255,255,255,0), #fff);
+  background: -moz-linear-gradient(90deg, rgba(255,255,255,0), #fff);
+  background: -webkit-linear-gradient(90deg, rgba(255,255,255,0), #fff);
 }

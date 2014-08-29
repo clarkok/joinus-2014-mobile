@@ -8,12 +8,6 @@ box-sizing()
   -moz-box-sizing: arguments
   box-sizing: arguments
 
-gradient-bg(angle, from, to)
-  background linear-gradient(angle, from, to)
-  background -ms-linear-gradient(angle, from, to)
-  background -moz-linear-gradient(angle, from, to)
-  background -webkit-linear-gradient(angle, from, to)
-
 html, body
   margin 0
   padding 0
@@ -192,6 +186,8 @@ html, body
     bottom 0
     #joinus-wrapper
       bottom 0
+      &:before
+        opacity 1
 
   .circle-big
     width $circle-size
@@ -213,3 +209,14 @@ html, body
     box-sizing border-box
     overflow-y auto
     overflow-x hidden
+    &:before
+      content: " "
+      display block
+      position absolute
+      height 1em
+      opacity 0
+      background linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
+      background -ms-linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
+      background -moz-linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
+      background -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
+
