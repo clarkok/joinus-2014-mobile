@@ -29,14 +29,15 @@ html, body
   position absolute
   top -100%
 
-  &:target .circle
+  &:target
     top 0
-    .text-wrapper
-      top 0
-      &:after
-        opacity 1
-    .dep-logo
-      bottom 0
+    .circle
+      .text-wrapper
+        top 0
+        &:after
+          opacity 1
+      .dep-logo
+        bottom 0
 
   &#intro
     .positioner

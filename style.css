@@ -14,7 +14,7 @@ body {
   position: absolute;
   top: -100%;
 }
-.page:target .circle {
+.page:target {
   top: 0;
 }
 .page:target .circle .text-wrapper {
