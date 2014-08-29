@@ -80,13 +80,13 @@ body {
   left: -24.744999999999997vmin;
 }
 .page .circle {
-  width: 300vmin;
-  height: 300vmin;
-  margin-top: -150vmin;
-  margin-left: -150vmin;
+  width: 200vh;
+  height: 200vh;
+  margin-top: -100vh;
+  margin-left: -100vh;
   background-color: #fff;
-  border-radius: 150vmin;
+  border-radius: 100vh;
   position: absolute;
-  top: 0;
+  top: -120vh;
   left: 50%;
 }
