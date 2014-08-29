@@ -17,6 +17,9 @@ body {
 .page:target {
   top: 0;
 }
+.page:target .circle .back {
+  top: 70vh;
+}
 .page:target .circle .text-wrapper {
   top: 0;
 }
@@ -103,6 +106,26 @@ body {
   top: -20vh;
   left: 50%;
 }
+.page .circle .back {
+  display: block;
+  width: 100%;
+  height: 2em;
+  position: fixed;
+  top: -2em;
+  left: 0;
+  z-index: 1;
+}
+.page .circle .back:after {
+  content: " ";
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #000 transparent;
+}
 .page .circle .text-wrapper {
   position: fixed;
   width: 100%;
@@ -119,7 +142,6 @@ body {
 .page .circle .text-wrapper:after {
   display: none;
   content: " ";
-  display: block;
   position: fixed;
   height: 1em;
   width: 100%;
@@ -178,6 +200,9 @@ body {
   top: auto;
   bottom: 0;
 }
+#joinus:target .circle-big .back {
+  bottom: 70vh;
+}
 #joinus:target #joinus-wrapper {
   bottom: 0;
 }
@@ -194,6 +219,28 @@ body {
   margin-left: -100vh;
   position: absolute;
   background-color: #fff;
+}
+#joinus .circle-big .back {
+  display: block;
+  position: fixed;
+  color: #000;
+  width: 100%;
+  height: 2em;
+  bottom: -2em;
+  left: 0;
+  z-index: 1;
+}
+#joinus .circle-big .back:after {
+  content: ".";
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #000 transparent transparent transparent;
+  top: 0;
+  left: 50%;
 }
 #joinus #joinus-wrapper {
   position: fixed;
@@ -234,6 +281,8 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0.5em;
+  margin-bottom: 1em;
+  position: relative;
 }
 #joinus #joinus-wrapper .input-text {
   border-bottom: 2px solid #000;
@@ -261,4 +310,55 @@ body {
   bottom: 2.3em;
   font-size: 0.8em;
   color: #000;
+}
+#joinus #joinus-wrapper .input-select {
+  border: 2px solid #000;
+}
+#joinus #joinus-wrapper .input-select:after {
+  content: " ";
+  width: 0;
+  height: 0;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #000 transparent transparent transparent;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+}
+#joinus #joinus-wrapper .input-select select {
+  display: none;
+}
+#joinus #joinus-wrapper .input-textarea textarea {
+  display: block;
+  width: 100%;
+  border-color: #000;
+  border-style: solid;
+  border-width: 2px 0;
+  height: 5em;
+}
+#joinus #joinus-wrapper .input-file input[type=file] {
+  display: none;
+}
+#joinus #joinus-wrapper .input-file .prompt {
+  position: relative;
+}
+#joinus #joinus-wrapper .input-file .prompt .button {
+  width: 3em;
+  height: 100%;
+  border: 2px solid #000;
+  border-radius: 2em;
+  text-align: center;
+  display: inline-block;
+  float: right;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#joinus #joinus-wrapper .input-submit .button {
+  height: 2em;
+  width: 100%;
+  border: 2px solid #000;
+  line-height: 2em;
+  text-align: center;
+  border-radius: 2em;
 }
