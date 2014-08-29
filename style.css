@@ -44,3 +44,35 @@ body {
   color: #000;
   text-decoration: none;
 }
+.page#intro .positioner .item#link-hr {
+  top: -5em;
+  left: 0;
+}
+.page#intro .positioner .item#link-photo {
+  top: -3.535em;
+  left: 3.535em;
+}
+.page#intro .positioner .item#link-news {
+  top: 0;
+  left: 5em;
+}
+.page#intro .positioner .item#link-video {
+  top: 3.535em;
+  left: 3.535em;
+}
+.page#intro .positioner .item#link-outreach {
+  top: 5em;
+  left: 0;
+}
+.page#intro .positioner .item#link-tide {
+  top: 3.535em;
+  left: -3.535em;
+}
+.page#intro .positioner .item#link-tech {
+  top: 0;
+  left: -5em;
+}
+.page#intro .positioner .item#link-pm {
+  top: -3.535em;
+  left: -3.535em;
+}
