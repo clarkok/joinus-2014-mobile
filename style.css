@@ -13,7 +13,23 @@ body {
   position: absolute;
   background-color: #eee;
 }
-.page .item {
+.page#intro .positioner {
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+}
+.page#intro .positioner .logo {
+  width: 5em;
+  height: 5em;
+  margin-top: -2.5em;
+  margin-left: -2.5em;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+}
+.page#intro .positioner .item {
   width: 4em;
   height: 4em;
   display: block;
