@@ -85,7 +85,7 @@ body {
   margin-top: -50vh;
   margin-left: -50vh;
   background-color: #fff;
-  border-radius: -50vh;
+  border-radius: 50vh;
   position: absolute;
   top: 0;
   left: 50%;
