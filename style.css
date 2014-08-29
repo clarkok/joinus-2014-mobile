@@ -217,22 +217,17 @@ body {
   left: 0;
   height: 1em;
   width: 100%;
+  z-index: 1;
   background: linear-gradient(90deg, rgba(255,255,255,0), #fff);
   background: -ms-linear-gradient(90deg, rgba(255,255,255,0), #fff);
   background: -moz-linear-gradient(90deg, rgba(255,255,255,0), #fff);
   background: -webkit-linear-gradient(90deg, rgba(255,255,255,0), #fff);
 }
-#joinus #joinus-wrapper .line {
-  position: relative;
+#joinus #joinus-wrapper .input.note {
+  color: #808080;
+  font-size: 0.8em;
 }
-#joinus #joinus-wrapper .line:after {
-  content: ".";
-  height: 0;
-  overflow: hidden;
-  display: inline-block;
-  clear: both;
-}
-#joinus #joinus-wrapper .line .input {
+#joinus #joinus-wrapper .input {
   display: block;
   width: 100%;
   -webkit-box-sizing: border-box;
@@ -240,17 +235,17 @@ body {
   box-sizing: border-box;
   padding: 0.5em;
 }
-#joinus #joinus-wrapper .line .input-text {
+#joinus #joinus-wrapper .input-text {
   border-bottom: 2px solid #000;
   position: relative;
 }
-#joinus #joinus-wrapper .line .input-text label {
+#joinus #joinus-wrapper .input-text label {
   position: absolute;
   color: #808080;
   bottom: 0.5em;
   left: 0.5em;
 }
-#joinus #joinus-wrapper .line .input-text input[type=text] {
+#joinus #joinus-wrapper .input-text input[type=text] {
   display: block;
   margin: 0;
   width: 100%;
@@ -262,7 +257,7 @@ body {
   background-color: transparent;
   border: 0;
 }
-#joinus #joinus-wrapper .line .input-text:focus label {
+#joinus #joinus-wrapper .input-text:focus label {
   bottom: 2.3em;
   font-size: 0.8em;
   color: #000;
