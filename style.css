@@ -12,6 +12,10 @@ body {
   height: 100%;
   position: absolute;
   background-color: #eee;
+  top: -100%;
+}
+.page:target {
+  top: 0;
 }
 .page#intro .positioner {
   width: 0;
