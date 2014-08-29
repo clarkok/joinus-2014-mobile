@@ -1,6 +1,7 @@
 $logo-size = 5em
 $item-radius = 35vmin
 $item-size = 4em
+$circle-size = 300vmin
 
 html, body
   margin 0
@@ -82,3 +83,13 @@ html, body
         &#link-pm
           top - 0.707 * $item-radius
           left - 0.707 * $item-radius
+  .circle
+    width $circle-size
+    height $circle-size
+    margin-top - ($circle-size / 2)
+    margin-left - ($circle-size / 2)
+    background-color white
+    border-radius - ($circle-size / 2)
+    position absolute
+    top 0
+    left 50%

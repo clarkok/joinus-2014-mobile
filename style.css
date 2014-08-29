@@ -79,3 +79,14 @@ body {
   top: -24.744999999999997vmin;
   left: -24.744999999999997vmin;
 }
+.page .circle {
+  width: 300vmin;
+  height: 300vmin;
+  margin-top: -150vmin;
+  margin-left: -150vmin;
+  background-color: #fff;
+  border-radius: -150vmin;
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
