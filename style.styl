@@ -1,5 +1,6 @@
 $logo-size = 5em
 $item-radius = 5em
+$item-size = 4em
 
 html, body
   margin 0
@@ -37,8 +38,8 @@ html, body
         background-repeat no-repeat
 
       .item
-        width 4em
-        height 4em
+        width $item-size
+        height $item-size
         display block
         border-radius 2em
         line-height 4em
@@ -46,6 +47,9 @@ html, body
         background-color white
         color black
         text-decoration none
+        position absolute
+        margin-top - $item-size / 2
+        margin-left - $item-size / 2
 
         &#link-hr
           top - $item-radius
