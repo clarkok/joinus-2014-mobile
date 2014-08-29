@@ -18,6 +18,8 @@ body {
   height: 4em;
   display: block;
   border-radius: 2em;
+  line-height: 4em;
+  text-align: center;
   background-color: #fff;
   color: #000;
   text-decoration: none;
