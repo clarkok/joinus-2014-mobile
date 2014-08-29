@@ -235,6 +235,9 @@ body {
 #joinus #joinus-wrapper .line .input {
   display: block;
   width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0.5em;
 }
 #joinus #joinus-wrapper .line .input-text {
@@ -258,4 +261,9 @@ body {
   font-size: 1em;
   background-color: transparent;
   border: 0;
+}
+#joinus #joinus-wrapper .line .input-text:focus label {
+  bottom: 2.3em;
+  font-size: 0.8em;
+  color: #000;
 }
