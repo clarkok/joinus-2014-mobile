@@ -175,6 +175,7 @@ body {
   height: 200vh;
   border-radius: 100vh;
   bottom: -20vh;
+  left: 50%;
   position: absolute;
   background-color: #fff;
 }
