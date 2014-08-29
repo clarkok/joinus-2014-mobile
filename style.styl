@@ -223,3 +223,24 @@ html, body
       background -moz-linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
       background -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
 
+    .line
+      position relative
+      &:after
+        content "."
+        height 0
+        overflow hidden
+        display inline-block
+        clear both
+      .input
+        display block
+        width 100%
+      .input-text
+        border-bottom 2px solid black
+        position relative
+        .label
+          position absolute
+          color grey
+        input[type=text]
+          width 100%
+          background-color transparent
+          border 0
