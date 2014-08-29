@@ -185,6 +185,11 @@ html, body
       background-image url(imgs/pm.png)
 
 #joinus
+  top auto
+  bottom -100%
+  &:target
+    top auto
+    bottom 0
   .circle-big
     width $circle-size
     height $circle-size
