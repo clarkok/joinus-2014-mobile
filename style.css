@@ -104,9 +104,11 @@ body {
   overflow-x: hidden;
 }
 .page .circle .text-wrapper:after {
+  content: " ";
   display: block;
   position: absolute;
-  height: 30%;
+  height: 1em;
+  width: 100%;
   bottom: 0;
   left: 0;
   background: linear-gradient(0deg, rgba(255,255,255,0), #fff);
