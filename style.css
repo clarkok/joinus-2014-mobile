@@ -216,6 +216,7 @@ body {
   margin-bottom: -1em;
   left: 0;
   height: 1em;
+  width: 100%;
   background: linear-gradient(90deg, rgba(255,255,255,0), #fff);
   background: -ms-linear-gradient(90deg, rgba(255,255,255,0), #fff);
   background: -moz-linear-gradient(90deg, rgba(255,255,255,0), #fff);
