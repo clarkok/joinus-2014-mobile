@@ -29,7 +29,7 @@ html, body
       .text-wrapper
         top 0
         &:after
-          opacity 1
+          display block
       .dep-logo
         bottom 0
 
@@ -120,7 +120,7 @@ html, body
       overflow-y auto
       overflow-x hidden
       &:after
-        opacity 0
+        display none
         content " "
         display block
         position fixed
@@ -187,7 +187,7 @@ html, body
     #joinus-wrapper
       bottom 0
       &:before
-        opacity 1
+        display block
 
   .circle-big
     width $circle-size
@@ -211,10 +211,12 @@ html, body
     overflow-x hidden
     &:before
       content: " "
-      display block
-      position absolute
+      display none
+      position fixed
+      bottom 70vh
+      margin-bottom -1em
+      left 0
       height 1em
-      opacity 0
       background linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
       background -ms-linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
       background -moz-linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))

@@ -21,7 +21,7 @@ body {
   top: 0;
 }
 .page:target .circle .text-wrapper:after {
-  opacity: 1;
+  display: block;
 }
 .page:target .circle .dep-logo {
   bottom: 0;
@@ -117,7 +117,7 @@ body {
   overflow-x: hidden;
 }
 .page .circle .text-wrapper:after {
-  opacity: 0;
+  display: none;
   content: " ";
   display: block;
   position: fixed;
@@ -182,7 +182,7 @@ body {
   bottom: 0;
 }
 #joinus:target #joinus-wrapper:before {
-  opacity: 1;
+  display: block;
 }
 #joinus .circle-big {
   width: 200vh;
@@ -210,10 +210,12 @@ body {
 }
 #joinus #joinus-wrapper:before {
   content: " ";
-  display: block;
-  position: absolute;
+  display: none;
+  position: fixed;
+  bottom: 70vh;
+  margin-bottom: -1em;
+  left: 0;
   height: 1em;
-  opacity: 0;
   background: linear-gradient(90deg, rgba(255,255,255,0), #fff);
   background: -ms-linear-gradient(90deg, rgba(255,255,255,0), #fff);
   background: -moz-linear-gradient(90deg, rgba(255,255,255,0), #fff);
