@@ -18,14 +18,11 @@ body {
   top: -100%;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
-  -o-transform: all 0.5s;
-  transform: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .page:target {
   top: 0;
-}
-.page:target .circle:after {
-  display: block;
 }
 .page:target .circle .dep-logo {
   bottom: 0;
@@ -124,7 +121,6 @@ body {
   left: 50%;
 }
 .page .circle:after {
-  display: none;
   content: " ";
   position: absolute;
   height: 1em;
@@ -214,14 +210,30 @@ body {
 }
 #joinus {
   top: auto;
-  bottom: -100%;
+  bottom: 0;
+  z-index: -1;
+  -webkit-transition-property: z-index;
+  -moz-transition-property: z-index;
+  -o-transition-property: z-index;
+  transition-property: z-index;
+  -webkit-transition-delay: 0.5s;
+  -moz-transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
+  transition-delay: 0.5s;
 }
 #joinus:target {
-  top: auto;
-  bottom: 0;
+  z-index: 1;
+  -webkit-transition-property: z-index;
+  -moz-transition-property: z-index;
+  -o-transition-property: z-index;
+  transition-property: z-index;
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  transition-delay: 0s;
 }
-#joinus:target .circle-big .back {
-  bottom: 70vh;
+#joinus:target .circle-big {
+  top: 20vh;
 }
 #joinus:target #joinus-wrapper {
   bottom: 0;
@@ -233,20 +245,23 @@ body {
   width: 1000px;
   height: 1000px;
   border-radius: 500px;
-  bottom: -20vh;
+  top: 100vh;
   left: 50%;
-  margin-bottom: -500px;
   margin-left: -500px;
   position: absolute;
   background-color: #fff;
+  -webkit-transition: top 0.5s;
+  -moz-transition: top 0.5s;
+  -o-transition: top 0.5s;
+  transition: top 0.5s;
 }
 #joinus .circle-big .back {
   display: block;
-  position: fixed;
+  position: absolute;
   color: #000;
   width: 100%;
   height: 2em;
-  bottom: -2em;
+  top: 1em;
   left: 0;
   z-index: 1;
 }
@@ -259,42 +274,42 @@ body {
   border-width: 5px;
   border-style: solid;
   border-color: #000 transparent transparent transparent;
-  top: 0;
+  top: 1em;
   left: 50%;
 }
-#joinus #joinus-wrapper {
-  position: fixed;
-  width: 100%;
-  height: 70vh;
-  padding: 1em;
-  bottom: -70vh;
-  left: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-#joinus #joinus-wrapper:before {
+#joinus .circle-big:before {
   content: " ";
-  display: none;
-  position: fixed;
-  bottom: 70vh;
-  margin-bottom: -1em;
-  left: 0;
+  position: absolute;
+  top: 10vh;
+  left: 50%;
   height: 1em;
-  width: 100%;
+  width: 100vw;
+  margin-left: -50vw;
   z-index: 1;
   background: linear-gradient(90deg, rgba(255,255,255,0), #fff);
   background: -ms-linear-gradient(90deg, rgba(255,255,255,0), #fff);
   background: -moz-linear-gradient(90deg, rgba(255,255,255,0), #fff);
   background: -webkit-linear-gradient(90deg, rgba(255,255,255,0), #fff);
 }
-#joinus #joinus-wrapper .input.note {
+#joinus .circle-big #joinus-scroller {
+  position: absolute;
+  width: 100vw;
+  margin-left: -50vw;
+  height: 70vh;
+  padding: 1em;
+  top: 10vh;
+  left: 50%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+#joinus .circle-big #joinus-scroller #joinus-wrapper .input.note {
   color: #808080;
   font-size: 0.8em;
 }
-#joinus #joinus-wrapper .input {
+#joinus .circle-big #joinus-scroller #joinus-wrapper .input {
   display: block;
   width: 100%;
   -webkit-box-sizing: border-box;
@@ -304,17 +319,21 @@ body {
   margin-bottom: 1em;
   position: relative;
 }
-#joinus #joinus-wrapper .input-text {
+#joinus .circle-big #joinus-scroller #joinus-wrapper .input-text {
   border-bottom: 2px solid #000;
   position: relative;
 }
-#joinus #joinus-wrapper .input-text label {
+#joinus .circle-big #joinus-scroller #joinus-wrapper .input-text label {
   position: absolute;
   color: #808080;
   bottom: 0.5em;
   left: 0.5em;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
-#joinus #joinus-wrapper .input-text input[type=text] {
+#joinus .circle-big #joinus-scroller #joinus-wrapper .input-text input[type=text] {
   display: block;
   margin: 0;
   width: 100%;
@@ -326,15 +345,15 @@ body {
   background-color: transparent;
   border: 0;
 }
-#joinus #joinus-wrapper .input-text:focus label {
+#joinus .circle-big #joinus-scroller #joinus-wrapper .input-text.focus label {
   bottom: 2.3em;
   font-size: 0.8em;
   color: #000;
 }
-#joinus #joinus-wrapper .input-select {
+#joinus .circle-big #joinus-scroller #joinus-wrapper .input-select {
   border: 2px solid #000;
 }
-#joinus #joinus-wrapper .input-select:after {
+#joinus .circle-big #joinus-scroller #joinus-wrapper .input-select:after {
   content: " ";
   width: 0;
   height: 0;
@@ -345,10 +364,10 @@ body {
   right: 1em;
   top: 1em;
 }
-#joinus #joinus-wrapper .input-select select {
+#joinus .circle-big #joinus-scroller #joinus-wrapper .input-select select {
   display: none;
 }
-#joinus #joinus-wrapper .input-textarea textarea {
+#joinus .circle-big #joinus-scroller #joinus-wrapper .input-textarea textarea {
   display: block;
   width: 100%;
   border-color: #000;
@@ -356,13 +375,13 @@ body {
   border-width: 2px 0;
   height: 5em;
 }
-#joinus #joinus-wrapper .input-file input[type=file] {
+#joinus .circle-big #joinus-scroller #joinus-wrapper .input-file input[type=file] {
   display: none;
 }
-#joinus #joinus-wrapper .input-file .prompt {
+#joinus .circle-big #joinus-scroller #joinus-wrapper .input-file .prompt {
   position: relative;
 }
-#joinus #joinus-wrapper .input-file .prompt .button {
+#joinus .circle-big #joinus-scroller #joinus-wrapper .input-file .prompt .button {
   width: 3em;
   height: 100%;
   border: 2px solid #000;
@@ -374,7 +393,7 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-#joinus #joinus-wrapper .input-submit .button {
+#joinus .circle-big #joinus-scroller #joinus-wrapper .input-submit .button {
   height: 2em;
   width: 100%;
   border: 2px solid #000;

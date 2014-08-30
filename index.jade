@@ -89,78 +89,81 @@ html(lang="zh")
     .page#joinus
       .circle-big
         a.back(href="#intro")
-        form#joinus-wrapper
-          input#input-fill(type="hidden", name="fill-duration")
-          input#input-view(type="hidden", name="view-duration")
-          .input.note
-            p 欢迎来到求是潮报名页面
-            ol
-              li 带有 “*” 的内容为必填项
-              li 请记牢自己所填的姓名，学号和邮箱，在任意电脑输入以上信息即可以再次编辑上次提交的内容
-          .input.input-text#input-name
-            label 姓名*
-            input(type="text", name="name")
-          .input.input-select#input-gender
-            label 性别
-            select(name="gender", value="0")
-              option(value="0") 不确定
-              option(value="1") 男生
-              option(value="2") 女生
-          .input.input-text#input-long
-            label 长号*
-            input(type="text", name="long")
-          .input.input-text#input-short
-            label 短号
-            input(type="text", name="short")
-          .input.input-text#input-email
-            label Email*
-            input(type="text", name="email")
-          .input.input-text#input-id
-            label 学号*
-            input(type="text", name="id")
-          .input.input-text#input-grade
-            label 年级
-            input(type="text", name="grade")
-          .input.input-text#input-class
-            label 大类
-            input(type="text", name="class")
-          .input.input-select#input-first-chose
-            label 第一志愿*
-            select(name='first-chose', value=0)
-              option(value="1") 人力资源部门
-              option(value="2") 摄影部
-              option(value="3") 新闻资讯中心
-              option(value="4") 视频团队
-              option(value="5") 推广策划中心
-              option(value="6") 水朝夕工作室
-              option(value="7") 技术研发中心（设计师）
-              option(value="8") 技术研发中心（工程师）
-              option(value="9") 产品运营部门
-          .input.input-select#input-second-chose
-            label 第二志愿  
-            select(name='first-chose', value=0)
-              option(value="1") 人力资源部门
-              option(value="2") 摄影部
-              option(value="3") 新闻资讯中心
-              option(value="4") 视频团队
-              option(value="5") 推广策划中心
-              option(value="6") 水朝夕工作室
-              option(value="7") 技术研发中心（设计师）
-              option(value="8") 技术研发中心（工程师）
-              option(value="9") 产品运营部门
-          .input.input-textarea#input-question1
-            label(for="self-intro").prompt 自我介绍
-            textarea#self-intro(name="question1")
-          .input.input-textarea#input-question2
-            label(for="question1").prompt 请谈谈你对求是潮的第一印象
-            textarea#question1(name="question2")
-          .input.input-textarea#input-question3
-            label(for="question2").prompt 请谈谈你对所报部门的认识
-            textarea#question2(name="question3")
-          .input.input-file#input-file
-            .prompt 你可以上传任何能展示你的作品
-              .button +
-            .ul#list
-            input(type="file", name="upload[]", for="file-upload", multiple)
-          .input.input-submit
-            .button 提交
+        #joinus-scroller
+          form#joinus-wrapper
+            input#input-fill(type="hidden", name="fill-duration")
+            input#input-view(type="hidden", name="view-duration")
+            .input.note
+              p 欢迎来到求是潮报名页面
+              ol
+                li 带有 “*” 的内容为必填项
+                li 请记牢自己所填的姓名，学号和邮箱，在任意电脑输入以上信息即可以再次编辑上次提交的内容
+            .input.input-text#input-name
+              label 姓名*
+              input(type="text", name="name")
+            .input.input-select#input-gender
+              label 性别
+              select(name="gender", value="0")
+                option(value="0") 不确定
+                option(value="1") 男生
+                option(value="2") 女生
+            .input.input-text#input-long
+              label 长号*
+              input(type="text", name="long")
+            .input.input-text#input-short
+              label 短号
+              input(type="text", name="short")
+            .input.input-text#input-email
+              label Email*
+              input(type="text", name="email")
+            .input.input-text#input-id
+              label 学号*
+              input(type="text", name="id")
+            .input.input-text#input-grade
+              label 年级
+              input(type="text", name="grade")
+            .input.input-text#input-class
+              label 大类
+              input(type="text", name="class")
+            .input.input-select#input-first-chose
+              label 第一志愿*
+              select(name='first-chose', value=0)
+                option(value="1") 人力资源部门
+                option(value="2") 摄影部
+                option(value="3") 新闻资讯中心
+                option(value="4") 视频团队
+                option(value="5") 推广策划中心
+                option(value="6") 水朝夕工作室
+                option(value="7") 技术研发中心（设计师）
+                option(value="8") 技术研发中心（工程师）
+                option(value="9") 产品运营部门
+            .input.input-select#input-second-chose
+              label 第二志愿  
+              select(name='first-chose', value=0)
+                option(value="1") 人力资源部门
+                option(value="2") 摄影部
+                option(value="3") 新闻资讯中心
+                option(value="4") 视频团队
+                option(value="5") 推广策划中心
+                option(value="6") 水朝夕工作室
+                option(value="7") 技术研发中心（设计师）
+                option(value="8") 技术研发中心（工程师）
+                option(value="9") 产品运营部门
+            .input.input-textarea#input-question1
+              label(for="self-intro").prompt 自我介绍
+              textarea#self-intro(name="question1")
+            .input.input-textarea#input-question2
+              label(for="question1").prompt 请谈谈你对求是潮的第一印象
+              textarea#question1(name="question2")
+            .input.input-textarea#input-question3
+              label(for="question2").prompt 请谈谈你对所报部门的认识
+              textarea#question2(name="question3")
+            .input.input-file#input-file
+              .prompt 你可以上传任何能展示你的作品
+                .button +
+              .ul#list
+              input(type="file", name="upload[]", for="file-upload", multiple)
+            .input.input-submit
+              .button 提交
+    script(src="jquery.js")
+    script(src="script.js")
