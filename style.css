@@ -6,24 +6,25 @@ body {
   height: 100%;
   position: relative;
   overflow: hidden;
-  background-color: #eee;
+  background-color: #222;
+  background-image: url("imgs/bg-mobile.jpg");
+  background-size: cover;
+  background-position: center;
 }
 .page {
   width: 100%;
   height: 100%;
   position: absolute;
   top: -100%;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transform: all 0.5s;
+  transform: all 0.5s;
 }
 .page:target {
   top: 0;
 }
-.page:target .circle .back {
-  top: 70vh;
-}
-.page:target .circle .text-wrapper {
-  top: 0;
-}
-.page:target .circle .text-wrapper:after {
+.page:target .circle:after {
   display: block;
 }
 .page:target .circle .dep-logo {
@@ -44,7 +45,7 @@ body {
   top: 50%;
   left: 50%;
   position: absolute;
-  background-image: url("imgs/logo.png");
+  background-image: url("imgs/logo-white.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -53,67 +54,98 @@ body {
   width: 4em;
   height: 4em;
   display: block;
-  border-radius: 2em;
+  border-radius: 10em;
   line-height: 4em;
   text-align: center;
-  background-color: #fff;
   color: #000;
   text-decoration: none;
   position: absolute;
   margin-top: -2em;
   margin-left: -2em;
+  border-width: 2px;
+  border-style: solid;
 }
-.page#intro .positioner .item#link-hr {
+.page#intro .positioner .item#link-tech {
   top: -35vmin;
   left: 0;
-}
-.page#intro .positioner .item#link-photo {
-  top: -24.744999999999997vmin;
-  left: 24.744999999999997vmin;
-}
-.page#intro .positioner .item#link-news {
-  top: 0;
-  left: 35vmin;
+  color: #fdccff;
+  border-color: #fdccff;
 }
 .page#intro .positioner .item#link-video {
   top: 24.744999999999997vmin;
   left: 24.744999999999997vmin;
+  color: #ffccd8;
+  border-color: #ffccd8;
 }
-.page#intro .positioner .item#link-outreach {
-  top: 35vmin;
-  left: 0;
+.page#intro .positioner .item#link-photo {
+  top: -24.744999999999997vmin;
+  left: 24.744999999999997vmin;
+  color: #fec;
+  border-color: #fec;
+}
+.page#intro .positioner .item#link-news {
+  top: 0;
+  left: 35vmin;
+  color: #e8ffcc;
+  border-color: #e8ffcc;
 }
 .page#intro .positioner .item#link-tide {
+  top: 35vmin;
+  left: 0;
+  color: #ccffd5;
+  border-color: #ccffd5;
+}
+.page#intro .positioner .item#link-hr {
   top: 24.744999999999997vmin;
   left: -24.744999999999997vmin;
+  color: #ccfffe;
+  border-color: #ccfffe;
 }
-.page#intro .positioner .item#link-tech {
+.page#intro .positioner .item#link-outreach {
   top: 0;
   left: -35vmin;
+  color: #ccdeff;
+  border-color: #ccdeff;
 }
 .page#intro .positioner .item#link-pm {
   top: -24.744999999999997vmin;
   left: -24.744999999999997vmin;
+  color: #d7ccff;
+  border-color: #d7ccff;
 }
 .page .circle {
-  width: 200vh;
-  height: 200vh;
-  margin-top: -100vh;
-  margin-left: -100vh;
+  width: 1000px;
+  height: 1000px;
+  margin-left: -500px;
   background-color: #fff;
-  border-radius: 100vh;
+  border-radius: 500px;
   position: absolute;
-  top: -20vh;
+  bottom: 30%;
   left: 50%;
+}
+.page .circle:after {
+  display: none;
+  content: " ";
+  position: absolute;
+  height: 1em;
+  width: 100vw;
+  margin-left: -50vw;
+  left: 50%;
+  bottom: 10vh;
+  background: linear-gradient(-90deg, rgba(255,255,255,0), #fff);
+  background: -ms-linear-gradient(-90deg, rgba(255,255,255,0), #fff);
+  background: -moz-linear-gradient(-90deg, rgba(255,255,255,0), #fff);
+  background: -webkit-linear-gradient(-90deg, rgba(255,255,255,0), #fff);
 }
 .page .circle .back {
   display: block;
-  width: 100%;
+  width: 100vw;
   height: 2em;
-  position: fixed;
-  top: -2em;
-  left: 0;
+  position: absolute;
+  bottom: 1em;
+  left: 50%;
   z-index: 1;
+  margin-left: -50vw;
 }
 .page .circle .back:after {
   content: " ";
@@ -121,41 +153,29 @@ body {
   height: 0;
   position: absolute;
   left: 50%;
-  bottom: 0;
+  bottom: 1em;
   border-width: 5px;
   border-style: solid;
   border-color: transparent transparent #000 transparent;
 }
-.page .circle .text-wrapper {
-  position: fixed;
-  width: 100%;
-  height: 70vh;
+.page .circle .text-scroller {
+  position: absolute;
+  width: 100vw;
+  margin-left: -50vw;
+  height: 60vh;
+  overflow-y: auto;
+  overflow-x: hidden;
   padding: 1em;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  top: -70vh;
-  left: 0;
-  overflow-y: auto;
-  overflow-x: hidden;
+  left: 50%;
+  bottom: 10vh;
 }
-.page .circle .text-wrapper:after {
-  display: none;
-  content: " ";
-  position: fixed;
-  height: 1em;
-  width: 100%;
-  bottom: 30%;
-  left: 0;
-  background: linear-gradient(-90deg, rgba(255,255,255,0), #fff);
-  background: -ms-linear-gradient(-90deg, rgba(255,255,255,0), #fff);
-  background: -moz-linear-gradient(-90deg, rgba(255,255,255,0), #fff);
-  background: -webkit-linear-gradient(-90deg, rgba(255,255,255,0), #fff);
-}
-.page .circle .text-wrapper p {
+.page .circle .text-scroller .text-wrapper p {
   text-indent: 2em;
 }
-.page .circle .text-wrapper h2 {
+.page .circle .text-scroller .text-wrapper h2 {
   margin-top: 0;
 }
 .page .circle .dep-logo {
@@ -210,13 +230,13 @@ body {
   display: block;
 }
 #joinus .circle-big {
-  width: 200vh;
-  height: 200vh;
-  border-radius: 100vh;
+  width: 1000px;
+  height: 1000px;
+  border-radius: 500px;
   bottom: -20vh;
   left: 50%;
-  margin-bottom: -100vh;
-  margin-left: -100vh;
+  margin-bottom: -500px;
+  margin-left: -500px;
   position: absolute;
   background-color: #fff;
 }

@@ -1,12 +1,18 @@
 $logo-size = 5em
 $item-radius = 35vmin
 $item-size = 4em
-$circle-size = 200vh
+$circle-size = 1000px
 
 box-sizing()
   -webkit-box-sizing: arguments
   -moz-box-sizing: arguments
   box-sizing: arguments
+
+transition()
+  -webkit-transition arguments
+  -moz-transition arguments
+  -o-transform arguments
+  transform arguments
 
 html, body
   margin 0
@@ -15,23 +21,23 @@ html, body
   height 100%
   position relative
   overflow hidden
-  background-color #eee
+  background-color #222
+  background-image url(imgs/bg-mobile.jpg)
+  background-size cover
+  background-position center
 
 .page
   width 100%
   height 100%
   position absolute
   top -100%
+  transition all .5s
 
   &:target
     top 0
     .circle
-      .back
-        top 70vh
-      .text-wrapper
-        top 0
-        &:after
-          display block
+      &:after
+        display block
       .dep-logo
         bottom 0
 
@@ -51,7 +57,7 @@ html, body
         top 50%
         left 50%
         position absolute
-        background-image url(imgs/logo.png)
+        background-image url(imgs/logo-white.png)
         background-size contain
         background-position center
         background-repeat no-repeat
@@ -60,101 +66,123 @@ html, body
         width $item-size
         height $item-size
         display block
-        border-radius 2em
+        border-radius 10em
         line-height 4em
         text-align center
-        background-color white
         color black
         text-decoration none
         position absolute
         margin-top - ($item-size / 2)
         margin-left - ($item-size / 2)
+        border-width 2px
+        border-style solid
 
-        &#link-hr
+        &#link-tech
           top - $item-radius
           left 0
-
-        &#link-photo
-          top - 0.707 * $item-radius
-          left 0.707 * $item-radius
-
-        &#link-news
-          top 0
-          left $item-radius
+          color #fdccff
+          border-color #fdccff
 
         &#link-video
           top 0.707 * $item-radius
           left 0.707 * $item-radius
+          color #ffccd8
+          border-color #ffccd8
 
-        &#link-outreach
-          top $item-radius
-          left 0
+        &#link-photo
+          top - 0.707 * $item-radius
+          left 0.707 * $item-radius
+          color #ffeecc
+          border-color #ffeecc
+
+        &#link-news
+          top 0
+          left $item-radius
+          color #e8ffcc
+          border-color #e8ffcc
 
         &#link-tide
+          top $item-radius
+          left 0
+          color #ccffd5
+          border-color #ccffd5
+
+        &#link-hr
           top 0.707 * $item-radius
           left - 0.707 * $item-radius
+          color #ccfffe
+          border-color #ccfffe
 
-        &#link-tech
+        &#link-outreach
           top 0
           left - $item-radius
+          color #ccdeff
+          border-color #ccdeff
 
         &#link-pm
           top - 0.707 * $item-radius
           left - 0.707 * $item-radius
+          color #d7ccff
+          border-color #d7ccff
+
   .circle
     width $circle-size
     height $circle-size
-    margin-top - ($circle-size / 2)
     margin-left - ($circle-size / 2)
     background-color white
     border-radius ($circle-size / 2)
     position absolute
-    top -20vh
+    bottom 30%
     left 50%
+    &:after
+      display none
+      content " "
+      position absolute
+      height 1em
+      width 100vw
+      margin-left -50vw
+      left 50%
+      bottom 10vh
+      background linear-gradient(-90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
+      background -ms-linear-gradient(-90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
+      background -moz-linear-gradient(-90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
+      background -webkit-linear-gradient(-90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
     .back
       display block
-      width 100%
+      width 100vw
       height 2em
-      position fixed
-      top -2em
-      left 0
+      position absolute
+      bottom 1em
+      left 50%
       z-index 1
+      margin-left -50vw
       &:after
         content " "
         width 0
         height 0
         position absolute
         left 50%
-        bottom 0
+        bottom 1em
         border-width 5px
         border-style solid
         border-color transparent transparent black transparent
-    .text-wrapper
-      position fixed
-      width 100%
-      height 70vh
-      padding 1em
-      box-sizing border-box
-      top -70vh
-      left 0
+    .text-scroller
+      position absolute
+      width 100vw
+      margin-left -50vw
+      height 60vh
       overflow-y auto
       overflow-x hidden
-      &:after
-        display none
-        content " "
-        position fixed
-        height 1em
-        width 100%
-        bottom 30%
-        left 0
-        background linear-gradient(-90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
-        background -ms-linear-gradient(-90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
-        background -moz-linear-gradient(-90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
-        background -webkit-linear-gradient(-90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
-      p
-        text-indent 2em
-      h2
-        margin-top 0
+      padding 1em
+      box-sizing border-box
+      left 50%
+      bottom 10vh
+
+      .text-wrapper
+        p
+          text-indent 2em
+        h2
+          margin-top 0
     .dep-logo
       position fixed
       width 100%
