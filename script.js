@@ -9,6 +9,10 @@
       $(this).parents('.input').removeClass('focus');
   }).on('blur');
 
+  $('select').on('change', function () {
+    $(this).parents('.input').children('label').text($(this).children('[value='+$(this).val()+']').text());
+  }).trigger('change');
+
   $('.input-select').on('click', function () {
     console.log('click');
     $(this).find('select').focus();
