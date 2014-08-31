@@ -50,6 +50,9 @@ body {
 .page:target .circle .dep-logo {
   bottom: 0;
 }
+.page:target .circle .text-scroller {
+  top: 0;
+}
 .page#intro .positioner {
   width: 0;
   height: 0;
@@ -188,7 +191,11 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   left: 0;
-  top: 0;
+  top: -100%;
+  -webkit-transition: top 0.5s;
+  -moz-transition: top 0.5s;
+  -o-transition: top 0.5s;
+  transition: top 0.5s;
 }
 .page .circle .text-scroller .text-wrapper p {
   text-indent: 2em;
