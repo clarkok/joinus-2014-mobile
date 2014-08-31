@@ -186,11 +186,26 @@ body {
   -o-transition: top 0.5s;
   transition: top 0.5s;
 }
+.page .circle .text-scroller .text-wrapper {
+  position: relative;
+}
 .page .circle .text-scroller .text-wrapper p {
   text-indent: 2em;
 }
 .page .circle .text-scroller .text-wrapper h2 {
   margin-top: 0;
+}
+.page .circle .text-scroller .text-wrapper .join {
+  display: block;
+  height: 2em;
+  line-height: 2em;
+  width: 100%;
+  border: 2px solid #000;
+  color: #000;
+  border-radius: 4em;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 1em;
 }
 .page .circle .dep-logo {
   position: fixed;
