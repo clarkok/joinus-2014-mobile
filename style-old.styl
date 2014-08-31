@@ -165,23 +165,23 @@ html, body
       content " "
       position absolute
       height 1em
-      width 480px
-      margin-left -240px
+      width 240px
+      margin-left -120px
       left 50%
-      bottom 64px
+      bottom 2em
       background linear-gradient(-90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
       background -ms-linear-gradient(-90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
       background -moz-linear-gradient(-90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
       background -webkit-linear-gradient(-90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
     .back
       display block
-      width 480px
+      width 100vw
       height 2em
       position absolute
       bottom 1em
       left 50%
       z-index 1
-      margin-left -240px
+      margin-left -50vw
       &:after
         content " "
         width 0
@@ -194,15 +194,15 @@ html, body
         border-color transparent transparent black transparent
     .text-scroller
       position absolute
-      width 480px
-      margin-left -240px
-      height 384px
+      width 100vw
+      margin-left -50vw
+      height 60vh
       overflow-y auto
       overflow-x hidden
       padding 1em
       box-sizing border-box
       left 50%
-      bottom 64px
+      bottom 10vh
 
       .text-wrapper
         p
@@ -212,8 +212,8 @@ html, body
     .dep-logo
       position fixed
       width 100%
-      height 128px
-      bottom -128px
+      height 20vh
+      bottom -20vh
       left 0
       background-size contain
       background-repeat no-repeat
@@ -262,7 +262,7 @@ html, body
     transition-property z-index
     transition-delay 0s
     .circle-big
-      top 128px
+      top 20vh
     #joinus-wrapper
       bottom 0
       &:before
@@ -272,7 +272,7 @@ html, body
     width $circle-size
     height $circle-size
     border-radius ($circle-size / 2)
-    top 640px
+    top 100vh
     left 50%
     margin-left - ($circle-size / 2)
     position absolute
@@ -301,11 +301,11 @@ html, body
     &:before
       content: " "
       position absolute
-      top 640px
+      top 10vh
       left 50%
       height 1em
-      width 480px
-      margin-left -240px
+      width 100vw
+      margin-left -50vw
       z-index 1
       background linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
       background -ms-linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
@@ -313,11 +313,11 @@ html, body
       background -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
     #joinus-scroller
       position absolute
-      width 480px
-      margin-left -240px
-      height 448px
+      width 100vw
+      margin-left -50vw
+      height 70vh
       padding 1em
-      top 64px
+      top 10vh
       left 50%
       box-sizing border-box
       overflow-y auto
