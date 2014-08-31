@@ -308,6 +308,10 @@ body {
   box-sizing: border-box;
   overflow-y: auto;
   overflow-x: hidden;
+  -webkit-transition: top 0.5s;
+  -moz-transition: top 0.5s;
+  -o-transition: top 0.5s;
+  transition: top 0.5s;
 }
 #joinus .circle-big #joinus-scroller #joinus-wrapper .input.note {
   color: #808080;
