@@ -20,4 +20,8 @@
   $('select').on('click', function (e) {
     e.stopPropagation();
   });
+
+  if (w.location.hash.length <= 1) {
+    w.location.hash = '#intro';
+  }
 })(window, window.jQuery);
