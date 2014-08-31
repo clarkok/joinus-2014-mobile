@@ -1,6 +1,17 @@
 "use strict";
 (function (w, $) {
-  console.log($('.item').css('top'));
+  var test_ele = $('<div />').css({
+    width : '100vw'
+  });
+
+  if (test_ele.width() !== $(w).width()) {
+    console.log('old');
+    $('<link />').attr({
+      rel: 'stylesheet',
+      type: 'text/css',
+      href: 'style-old.css'
+    }).appendTo('head');
+  }
 })(window, window.jQuery);
 
 (function (w, $) {

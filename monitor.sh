@@ -5,5 +5,6 @@ while true
   do inotifywait -e modify -q -r .
   jade index.jade
   stylus style.styl
+  stylus style-old.styl
 done
 
