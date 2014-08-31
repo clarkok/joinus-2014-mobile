@@ -1,6 +1,6 @@
 "use strict";
 (function (w, $) {
-  var test_ele = $('<div />').css({
+  var test_ele = $('#notice').css({
     width : '100vw'
   });
 
@@ -12,6 +12,10 @@
       href: 'style-old.css'
     }).appendTo('head');
   }
+
+  $('#notice').css({
+    width : ''
+  });
 })(window, window.jQuery);
 
 (function (w, $) {
