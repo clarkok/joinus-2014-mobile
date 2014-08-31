@@ -365,7 +365,11 @@ body {
   top: 1em;
 }
 #joinus .circle-big #joinus-scroller #joinus-wrapper .input-select select {
-  display: none;
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 #joinus .circle-big #joinus-scroller #joinus-wrapper .input-textarea textarea {
   display: block;
