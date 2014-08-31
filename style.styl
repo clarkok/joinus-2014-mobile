@@ -38,6 +38,23 @@ html, body
   background-size cover
   background-position center
 
+#notice
+  position fixed
+  width 100%
+  height 2em
+  line-height 2em
+  background-color white
+  left 0
+  top -2em
+  transition top .5s
+  a
+    color black
+  &.show
+    top 0
+  &.error
+    top 0
+    background-color #fee
+
 .page
   width 100%
   height 100%

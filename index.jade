@@ -6,6 +6,8 @@ html(lang="zh")
     link(rel="stylesheet", href="style.css")
     meta(name="viewport", content="width=device-width, initial-scale=1.0, user-scalable=no")
   body
+    #notice
+      span#notice-content
     .page#intro
       .positioner
         a(href="#joinus").logo
@@ -90,7 +92,7 @@ html(lang="zh")
       .circle-big
         a.back(href="#intro")
         #joinus-scroller
-          form#joinus-wrapper
+          form(action="../submit.php", method="POST")#joinus-wrapper
             input#input-fill(type="hidden", name="fill-duration")
             input#input-view(type="hidden", name="view-duration")
             .input.note
@@ -167,5 +169,6 @@ html(lang="zh")
               input(type="file", name="upload[]", for="file-upload", multiple)
             .input.input-submit
               .button 提交
+    form#file-upload()
     script(src="jquery.js")
     script(src="script.js")
