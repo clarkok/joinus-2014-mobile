@@ -109,6 +109,45 @@
     $(this).parents('form').trigger('submit');
   });
 
+  $('.input-file .button').on('click', function () {
+    $(this).parents('.input-file').find('input[type=file]').trigger('click');
+  });
+
+  $('input[type=file]').fileupload({
+    url : '../upload.php',
+    add : function (e, data) {
+      if ($('input[name=id]').val().length) {
+        if (data.files[0].size > 15 * 1024 * 1024) {
+          alert('每个文件最大15M，更大可以传网盘嗷');
+        }
+        $('#list').append(
+          data.list_item_jquery = $('<li />').addClass('list-item').text(data.files[0].name).css('color', 'grey')
+        );
+        data.process().done(function () {
+          data.submit();
+        });
+      }
+      else {
+        alert('请先填写学号');
+        return false;
+      }
+    },
+    done : function (e, data) {
+      data.list_item_jquery.css('color', 'black');
+    }
+  }).bind('fileuploadsubmit', function (e, data) {
+    if ($('input[name=id]').val().length) {
+      data.formData = {
+        id : $('input[name=id]').val()
+      };
+      return true;
+    }
+    else {
+      alert('ID first');
+      return false;
+    }
+  });
+
   if (w.location.hash.length <= 1) {
     w.location.hash = '#intro';
   }
