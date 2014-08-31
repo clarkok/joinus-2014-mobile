@@ -259,6 +259,8 @@ html, body
     transition-delay 0s
     .circle-big
       top 20vh
+      #joinus-scroller
+        top 10%
     #joinus-wrapper
       bottom 0
       &:before
@@ -268,7 +270,6 @@ html, body
     width $circle-size
     height $circle-size
     border-radius ($circle-size / 2)
-    top 100vh
     left 50%
     margin-left - ($circle-size / 2)
     position absolute
@@ -294,26 +295,13 @@ html, body
         border-color black transparent transparent transparent
         top 1em
         left 50%
-    &:before
-      content: " "
-      position absolute
-      top 10vh
-      left 50%
-      height 1em
-      width 100vw
-      margin-left -50vw
-      z-index 1
-      background linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
-      background -ms-linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
-      background -moz-linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
-      background -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
     #joinus-scroller
-      position absolute
-      width 100vw
-      margin-left -50vw
-      height 70vh
+      position fixed
+      width 100%
+      margin-left -50%
+      height 90%
       padding 1em
-      top 10vh
+      top 100%
       left 50%
       box-sizing border-box
       overflow-y auto

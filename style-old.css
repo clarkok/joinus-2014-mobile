@@ -251,6 +251,9 @@ body {
 #joinus:target .circle-big {
   top: 20vh;
 }
+#joinus:target .circle-big #joinus-scroller {
+  top: 10%;
+}
 #joinus:target #joinus-wrapper {
   bottom: 0;
 }
@@ -261,7 +264,6 @@ body {
   width: 1000px;
   height: 1000px;
   border-radius: 500px;
-  top: 100vh;
   left: 50%;
   margin-left: -500px;
   position: absolute;
@@ -293,27 +295,13 @@ body {
   top: 1em;
   left: 50%;
 }
-#joinus .circle-big:before {
-  content: " ";
-  position: absolute;
-  top: 10vh;
-  left: 50%;
-  height: 1em;
-  width: 100vw;
-  margin-left: -50vw;
-  z-index: 1;
-  background: linear-gradient(90deg, rgba(255,255,255,0), #fff);
-  background: -ms-linear-gradient(90deg, rgba(255,255,255,0), #fff);
-  background: -moz-linear-gradient(90deg, rgba(255,255,255,0), #fff);
-  background: -webkit-linear-gradient(90deg, rgba(255,255,255,0), #fff);
-}
 #joinus .circle-big #joinus-scroller {
-  position: absolute;
-  width: 100vw;
-  margin-left: -50vw;
-  height: 70vh;
+  position: fixed;
+  width: 100%;
+  margin-left: -50%;
+  height: 90%;
   padding: 1em;
-  top: 10vh;
+  top: 100%;
   left: 50%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
