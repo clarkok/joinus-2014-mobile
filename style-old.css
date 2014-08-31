@@ -147,8 +147,8 @@ body {
   content: " ";
   position: absolute;
   height: 1em;
-  width: 240px;
-  margin-left: -120px;
+  width: 100%;
+  margin-left: -50%;
   left: 50%;
   bottom: 2em;
   background: linear-gradient(-90deg, rgba(255,255,255,0), #fff);
@@ -158,13 +158,13 @@ body {
 }
 .page .circle .back {
   display: block;
-  width: 100vw;
+  width: 240px;
   height: 2em;
   position: absolute;
   bottom: 1em;
   left: 50%;
   z-index: 1;
-  margin-left: -50vw;
+  margin-left: -120px;
 }
 .page .circle .back:after {
   content: " ";
