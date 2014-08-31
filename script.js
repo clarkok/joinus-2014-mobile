@@ -52,6 +52,7 @@
 
   w.Notifier = Notifier;
 })(window, window.jQuery);
+
 (function (w, $) {
   $('input[type=text]').on('focus', function () {
     $(this).parents('.input').addClass('focus');
@@ -103,7 +104,7 @@
     }, 'json');
   });
 
-  $('.button').on('click', function () {
+  $('.input-submit .button').on('click', function () {
     console.log('submit');
     $(this).parents('form').trigger('submit');
   });
