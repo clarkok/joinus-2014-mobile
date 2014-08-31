@@ -86,50 +86,50 @@ body {
   border-style: solid;
 }
 .page#intro .positioner .item#link-tech {
-  top: -35vw;
+  top: -140px;
   left: 0;
   color: #fdccff;
   border-color: #fdccff;
 }
 .page#intro .positioner .item#link-video {
-  top: 24.744999999999997vw;
-  left: 24.744999999999997vw;
+  top: 98.97999999999999px;
+  left: 98.97999999999999px;
   color: #ffccd8;
   border-color: #ffccd8;
 }
 .page#intro .positioner .item#link-photo {
-  top: -24.744999999999997vw;
-  left: 24.744999999999997vw;
+  top: -98.97999999999999px;
+  left: 98.97999999999999px;
   color: #fec;
   border-color: #fec;
 }
 .page#intro .positioner .item#link-news {
   top: 0;
-  left: 35vw;
+  left: 140px;
   color: #e8ffcc;
   border-color: #e8ffcc;
 }
 .page#intro .positioner .item#link-tide {
-  top: 35vw;
+  top: 140px;
   left: 0;
   color: #ccffd5;
   border-color: #ccffd5;
 }
 .page#intro .positioner .item#link-hr {
-  top: 24.744999999999997vw;
-  left: -24.744999999999997vw;
+  top: 98.97999999999999px;
+  left: -98.97999999999999px;
   color: #ccfffe;
   border-color: #ccfffe;
 }
 .page#intro .positioner .item#link-outreach {
   top: 0;
-  left: -35vw;
+  left: -140px;
   color: #ccdeff;
   border-color: #ccdeff;
 }
 .page#intro .positioner .item#link-pm {
-  top: -24.744999999999997vw;
-  left: -24.744999999999997vw;
+  top: -98.97999999999999px;
+  left: -98.97999999999999px;
   color: #d7ccff;
   border-color: #d7ccff;
 }
