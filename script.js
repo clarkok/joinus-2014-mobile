@@ -10,7 +10,8 @@
   }).on('blur');
 
   $('.input-select').on('click', function () {
-    $(this).find('select').trigger('click');
+    console.log('click');
+    $(this).find('select').focus();
   });
   $('select').on('click', function (e) {
     e.stopPropagation();
