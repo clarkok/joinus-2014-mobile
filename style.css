@@ -23,6 +23,8 @@ body {
   -moz-transition: top 0.5s;
   -o-transition: top 0.5s;
   transition: top 0.5s;
+  text-align: center;
+  z-index: 10;
 }
 #notice a {
   color: #000;
@@ -341,6 +343,9 @@ body {
   padding: 0.5em;
   margin-bottom: 1em;
   position: relative;
+}
+#joinus .circle-big #joinus-scroller #joinus-wrapper .input.error {
+  border-color: #f00;
 }
 #joinus .circle-big #joinus-scroller #joinus-wrapper .input-text {
   border-bottom: 2px solid #000;

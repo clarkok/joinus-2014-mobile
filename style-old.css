@@ -23,6 +23,8 @@ body {
   -moz-transition: top 0.5s;
   -o-transition: top 0.5s;
   transition: top 0.5s;
+  text-align: center;
+  z-index: 10;
 }
 #notice a {
   color: #000;
