@@ -292,6 +292,7 @@ body {
   display: block;
 }
 #joinus .circle-big {
+  top: 100%;
   width: 1000px;
   height: 1000px;
   border-radius: 500px;
