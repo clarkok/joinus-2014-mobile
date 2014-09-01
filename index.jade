@@ -10,7 +10,7 @@ html(lang="zh")
       var test_ele = document.body;
       test_ele.style.height = '200vh';
       if (window.innerHeight * 2 !== test_ele.clientHeight) {
-        document.getElementsByTagName('link').href="style-old.css";
+        document.getElementsByTagName('link')[0].href="style-old.css";
       }
       test_ele.style.height = '';
     #notice
