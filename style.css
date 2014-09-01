@@ -158,7 +158,6 @@ body {
   position: absolute;
   bottom: 30%;
   left: 50%;
-  transform: translateZ(0);
 }
 .page .circle:after {
   content: " ";
