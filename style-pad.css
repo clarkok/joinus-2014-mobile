@@ -151,11 +151,11 @@ body {
   border-color: #d7ccff;
 }
 .page .circle {
-  width: 1000px;
-  height: 1000px;
-  margin-left: -500px;
+  width: 2000px;
+  height: 2000px;
+  margin-left: -1000px;
   background-color: #fff;
-  border-radius: 500px;
+  border-radius: 1000px;
   position: absolute;
   bottom: 30%;
   left: 50%;
@@ -297,12 +297,12 @@ body {
   display: block;
 }
 #joinus .circle-big {
-  width: 1000px;
-  height: 1000px;
-  border-radius: 500px;
+  width: 2000px;
+  height: 2000px;
+  border-radius: 1000px;
   top: 100vh;
   left: 50%;
-  margin-left: -500px;
+  margin-left: -1000px;
   position: absolute;
   background-color: #fff;
   -webkit-transition: top 0.5s;
