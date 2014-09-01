@@ -47,6 +47,7 @@ body {
   -o-transition: all 0.5s;
   transition: all 0.5s;
   overflow: hidden;
+  transform: translateZ(0);
 }
 .page:target {
   top: 0;
