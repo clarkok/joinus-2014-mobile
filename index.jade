@@ -6,6 +6,13 @@ html(lang="zh")
     link(rel="stylesheet", href="style.css")
     meta(name="viewport", content="width=device-width, initial-scale=1.0, user-scalable=no")
   body
+    script(type="text/javascript").
+      var test_ele = document.body;
+      test_ele.style.height = '100vh';
+      if (window.innerHeight !== test_ele.clientHeight) {
+        document.getElementsByTagName('link').href="style-old.css";
+      }
+      test_ele.style.height = '';
     #notice
       span#notice-content
     .page#intro

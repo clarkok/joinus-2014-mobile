@@ -1,24 +1,5 @@
 "use strict";
 (function (w, $) {
-  var test_ele = $('#notice').css({
-    height : '100vh'
-  });
-
-  if (test_ele.height() !== $(w).height()) {
-    console.log('old');
-    $('<link />').attr({
-      rel: 'stylesheet',
-      type: 'text/css',
-      href: 'style-old.css'
-    }).appendTo('head');
-  }
-
-  $('#notice').css({
-    height : ''
-  });
-})(window, window.jQuery);
-
-(function (w, $) {
   var Notifier = function () {
     this.target = $('#notice');
     this.context = this.target.find('#notice-content');
