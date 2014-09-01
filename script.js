@@ -54,6 +54,14 @@
 })(window, window.jQuery);
 
 (function (w, $) {
+  var start_time = new Date();
+  var fill_time;
+
+  $(w).on('hashchange', function () {
+    if (w.location.hash == '#joinus')
+      fill_time = new Date();
+  });
+
   $('input[type=text]').on('focus', function () {
     $(this).parents('.input').addClass('focus');
   }).on('blur', function () {
@@ -79,6 +87,9 @@
 
   $('#joinus-wrapper').on('submit', function (e) {
     e.preventDefault();
+    var current = new Date();
+    $('#input-fill').val(current - fill_time);
+    $('#input-view').val(current - start_time);
     w.location.hash = '#intro';
     $('.error').removeClass('error');
     console.log($(this).attr('action'));
@@ -105,7 +116,6 @@
   });
 
   $('.input-submit .button').on('click', function () {
-    console.log('submit');
     $(this).parents('form').trigger('submit');
   });
 
