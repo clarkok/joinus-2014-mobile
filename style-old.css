@@ -46,6 +46,10 @@ body {
   -o-transition: all 0.5s;
   transition: all 0.5s;
   overflow: hidden;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
 }
 .page:target {
   top: 0;
@@ -161,6 +165,10 @@ body {
   position: absolute;
   bottom: 30%;
   left: 50%;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
 }
 .page .circle .back {
   display: block;

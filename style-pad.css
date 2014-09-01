@@ -47,6 +47,7 @@ body {
   -o-transition: all 0.5s;
   transition: all 0.5s;
   overflow: hidden;
+  transform: translateZ(0);
 }
 .page:target {
   top: 0;
@@ -159,6 +160,7 @@ body {
   position: absolute;
   bottom: 30%;
   left: 50%;
+  transform: translateZ(0);
 }
 .page .circle:after {
   content: " ";
