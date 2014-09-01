@@ -45,6 +45,7 @@ body {
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
+  overflow: hidden;
 }
 .page:target {
   top: 0;
