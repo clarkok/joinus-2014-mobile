@@ -1,10 +1,10 @@
 "use strict";
 (function (w, $) {
   var test_ele = $('#notice').css({
-    width : '100vw'
+    height : '100vh'
   });
 
-  if (test_ele.width() !== $(w).width()) {
+  if (test_ele.height() !== $(w).height()) {
     console.log('old');
     $('<link />').attr({
       rel: 'stylesheet',
@@ -14,7 +14,7 @@
   }
 
   $('#notice').css({
-    width : ''
+    height : ''
   });
 })(window, window.jQuery);
 
