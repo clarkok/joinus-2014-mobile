@@ -6,5 +6,6 @@ while true
   jade index.jade
   stylus style.styl
   stylus style-old.styl
+  stylus style-pad.styl
 done
 

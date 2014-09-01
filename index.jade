@@ -7,6 +7,8 @@ html(lang="zh")
     meta(name="viewport", content="width=device-width, initial-scale=1.0, user-scalable=no")
   body
     script(type="text/javascript").
+      if (window.innerHeight >= 768)
+        document.getElementsByTagName('link')[0].href="style-pad.css";
       var test_ele = document.body;
       test_ele.style.height = '200vh';
       if (window.innerHeight * 2 !== test_ele.clientHeight) {

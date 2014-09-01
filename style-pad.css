@@ -1,0 +1,474 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #222;
+  background-image: url("imgs/bg-mobile.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#notice {
+  position: fixed;
+  width: 100%;
+  height: 2em;
+  line-height: 2em;
+  background-color: #fff;
+  left: 0;
+  top: -2em;
+  -webkit-transition: top 0.5s;
+  -moz-transition: top 0.5s;
+  -o-transition: top 0.5s;
+  transition: top 0.5s;
+  text-align: center;
+  z-index: 10;
+}
+#notice a {
+  color: #000;
+}
+#notice.show {
+  top: 0;
+}
+#notice.error {
+  top: 0;
+  background-color: #fee;
+}
+.page {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -100%;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+.page:target {
+  top: 0;
+}
+.page:target .circle .dep-logo {
+  bottom: 0;
+}
+.page#intro .positioner {
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+}
+.page#intro .positioner .logo {
+  width: 5em;
+  height: 5em;
+  margin-top: -2.5em;
+  margin-left: -2.5em;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  background-image: url("imgs/logo-white.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.page#intro .positioner .logo-text {
+  letter-spacing: 0.3em;
+  font-size: 0.8em;
+  position: absolute;
+  display: block;
+  color: #fff;
+  width: 8em;
+  height: 1em;
+  margin-left: -4em;
+  left: 50%;
+  text-align: center;
+  top: 2.5em;
+}
+.page#intro .positioner .item {
+  width: 4em;
+  height: 4em;
+  display: block;
+  border-radius: 10em;
+  line-height: 4em;
+  text-align: center;
+  color: #000;
+  text-decoration: none;
+  position: absolute;
+  margin-top: -2em;
+  margin-left: -2em;
+  border-width: 2px;
+  border-style: solid;
+}
+.page#intro .positioner .item#link-tech {
+  top: -35vmin;
+  left: 0;
+  color: #fdccff;
+  border-color: #fdccff;
+}
+.page#intro .positioner .item#link-video {
+  top: 24.744999999999997vmin;
+  left: 24.744999999999997vmin;
+  color: #ffccd8;
+  border-color: #ffccd8;
+}
+.page#intro .positioner .item#link-photo {
+  top: -24.744999999999997vmin;
+  left: 24.744999999999997vmin;
+  color: #fec;
+  border-color: #fec;
+}
+.page#intro .positioner .item#link-news {
+  top: 0;
+  left: 35vmin;
+  color: #e8ffcc;
+  border-color: #e8ffcc;
+}
+.page#intro .positioner .item#link-tide {
+  top: 35vmin;
+  left: 0;
+  color: #ccffd5;
+  border-color: #ccffd5;
+}
+.page#intro .positioner .item#link-hr {
+  top: 24.744999999999997vmin;
+  left: -24.744999999999997vmin;
+  color: #ccfffe;
+  border-color: #ccfffe;
+}
+.page#intro .positioner .item#link-outreach {
+  top: 0;
+  left: -35vmin;
+  color: #ccdeff;
+  border-color: #ccdeff;
+}
+.page#intro .positioner .item#link-pm {
+  top: -24.744999999999997vmin;
+  left: -24.744999999999997vmin;
+  color: #d7ccff;
+  border-color: #d7ccff;
+}
+.page .circle {
+  width: 1000px;
+  height: 1000px;
+  margin-left: -500px;
+  background-color: #fff;
+  border-radius: 500px;
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+}
+.page .circle:after {
+  content: " ";
+  position: absolute;
+  height: 1em;
+  width: 100vw;
+  margin-left: -50vw;
+  left: 50%;
+  bottom: 10vh;
+  background: linear-gradient(-90deg, rgba(255,255,255,0), #fff);
+  background: -ms-linear-gradient(-90deg, rgba(255,255,255,0), #fff);
+  background: -moz-linear-gradient(-90deg, rgba(255,255,255,0), #fff);
+  background: -webkit-linear-gradient(-90deg, rgba(255,255,255,0), #fff);
+}
+.page .circle .back {
+  display: block;
+  width: 100vw;
+  height: 2em;
+  position: absolute;
+  bottom: 1em;
+  left: 50%;
+  z-index: 1;
+  margin-left: -50vw;
+}
+.page .circle .back:after {
+  content: " ";
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  bottom: 1em;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #000 transparent;
+}
+.page .circle .text-scroller {
+  position: absolute;
+  width: 100vw;
+  margin-left: -50vw;
+  height: 60vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 1em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  left: 50%;
+  bottom: 10vh;
+}
+.page .circle .text-scroller .text-wrapper {
+  position: relative;
+}
+.page .circle .text-scroller .text-wrapper p {
+  text-indent: 2em;
+}
+.page .circle .text-scroller .text-wrapper h2 {
+  margin-top: 0;
+}
+.page .circle .text-scroller .text-wrapper .join {
+  display: block;
+  height: 2em;
+  line-height: 2em;
+  width: 100%;
+  border: 2px solid #000;
+  color: #000;
+  border-radius: 4em;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 1em;
+}
+.page .circle .dep-logo {
+  position: fixed;
+  width: 100%;
+  height: 20vh;
+  bottom: -20vh;
+  left: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.page#hr .dep-logo {
+  background-image: url("imgs/hr.png");
+}
+.page#photo .dep-logo {
+  background-image: url("imgs/photo.png");
+}
+.page#news .dep-logo {
+  background-image: url("imgs/news.png");
+}
+.page#video .dep-logo {
+  background-image: url("imgs/video.png");
+}
+.page#outreach .dep-logo {
+  background-image: url("imgs/outreach.png");
+}
+.page#tide .dep-logo {
+  background-image: url("imgs/tide.png");
+}
+.page#tech .dep-logo {
+  background-image: url("imgs/tech.png");
+}
+.page#pm .dep-logo {
+  background-image: url("imgs/pm.png");
+}
+#joinus {
+  top: auto;
+  bottom: 0;
+  z-index: -1;
+  -webkit-transition-property: z-index;
+  -moz-transition-property: z-index;
+  -o-transition-property: z-index;
+  transition-property: z-index;
+  -webkit-transition-delay: 0.5s;
+  -moz-transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+#joinus:target {
+  z-index: 1;
+  -webkit-transition-property: z-index;
+  -moz-transition-property: z-index;
+  -o-transition-property: z-index;
+  transition-property: z-index;
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  transition-delay: 0s;
+}
+#joinus:target .circle-big {
+  top: 20vh;
+}
+#joinus:target #joinus-wrapper {
+  bottom: 0;
+}
+#joinus:target #joinus-wrapper:before {
+  display: block;
+}
+#joinus .circle-big {
+  width: 1000px;
+  height: 1000px;
+  border-radius: 500px;
+  top: 100vh;
+  left: 50%;
+  margin-left: -500px;
+  position: absolute;
+  background-color: #fff;
+  -webkit-transition: top 0.5s;
+  -moz-transition: top 0.5s;
+  -o-transition: top 0.5s;
+  transition: top 0.5s;
+}
+#joinus .circle-big .back {
+  display: block;
+  position: absolute;
+  color: #000;
+  width: 100%;
+  height: 2em;
+  top: 1em;
+  left: 0;
+  z-index: 1;
+}
+#joinus .circle-big .back:after {
+  content: ".";
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #000 transparent transparent transparent;
+  top: 1em;
+  left: 50%;
+}
+#joinus .circle-big:before {
+  content: " ";
+  position: absolute;
+  top: 10vh;
+  left: 50%;
+  height: 1em;
+  width: 100vw;
+  margin-left: -50vw;
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(255,255,255,0), #fff);
+  background: -ms-linear-gradient(90deg, rgba(255,255,255,0), #fff);
+  background: -moz-linear-gradient(90deg, rgba(255,255,255,0), #fff);
+  background: -webkit-linear-gradient(90deg, rgba(255,255,255,0), #fff);
+}
+#joinus .circle-big #joinus-scroller {
+  position: absolute;
+  width: 100vw;
+  margin-left: -50vw;
+  height: 70vh;
+  padding: 1em;
+  top: 10vh;
+  left: 50%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+#joinus .circle-big #joinus-scroller #joinus-wrapper .input.note {
+  color: #808080;
+  font-size: 0.8em;
+}
+#joinus .circle-big #joinus-scroller #joinus-wrapper .input {
+  display: block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  position: relative;
+}
+#joinus .circle-big #joinus-scroller #joinus-wrapper .input.error {
+  border-color: #f00;
+}
+#joinus .circle-big #joinus-scroller #joinus-wrapper .input-text {
+  border-bottom: 2px solid #000;
+  position: relative;
+}
+#joinus .circle-big #joinus-scroller #joinus-wrapper .input-text label {
+  position: absolute;
+  color: #808080;
+  bottom: 0.5em;
+  left: 0.5em;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#joinus .circle-big #joinus-scroller #joinus-wrapper .input-text input[type=text] {
+  display: block;
+  margin: 0;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  font-size: 1em;
+  background-color: transparent;
+  border: 0;
+}
+#joinus .circle-big #joinus-scroller #joinus-wrapper .input-text.focus label {
+  bottom: 2.3em;
+  font-size: 0.8em;
+  color: #000;
+}
+#joinus .circle-big #joinus-scroller #joinus-wrapper .input-select {
+  border: 2px solid #000;
+}
+#joinus .circle-big #joinus-scroller #joinus-wrapper .input-select:after {
+  content: " ";
+  width: 0;
+  height: 0;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #000 transparent transparent transparent;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+}
+#joinus .circle-big #joinus-scroller #joinus-wrapper .input-select select {
+  opacity: 0;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+#joinus .circle-big #joinus-scroller #joinus-wrapper .input-textarea textarea {
+  display: block;
+  width: 100%;
+  border-color: #000;
+  border-style: solid;
+  border-width: 2px 0;
+  height: 5em;
+}
+#joinus .circle-big #joinus-scroller #joinus-wrapper .input-file input[type=file] {
+  display: none;
+}
+#joinus .circle-big #joinus-scroller #joinus-wrapper .input-file .prompt {
+  position: relative;
+}
+#joinus .circle-big #joinus-scroller #joinus-wrapper .input-file .prompt .button {
+  width: 3em;
+  height: 100%;
+  border: 2px solid #000;
+  border-radius: 2em;
+  text-align: center;
+  display: inline-block;
+  float: right;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#joinus .circle-big #joinus-scroller #joinus-wrapper .input-file p.note {
+  color: #808080;
+  font-size: 0.8em;
+  text-indent: 2em;
+}
+#joinus .circle-big #joinus-scroller #joinus-wrapper .input-submit .button {
+  height: 2em;
+  width: 100%;
+  border: 2px solid #000;
+  line-height: 2em;
+  text-align: center;
+  border-radius: 2em;
+}
