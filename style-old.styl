@@ -52,7 +52,6 @@ html, body
   background-color white
   left 0
   top -2em
-  transition top .5s
   text-align center
   z-index 10
   a
@@ -68,7 +67,6 @@ html, body
   height 100%
   position absolute
   top -100%
-  transition all .5s
   overflow hidden
   transform translateZ(0);
 
@@ -215,7 +213,6 @@ html, body
       box-sizing border-box
       left 0
       top -100%
-      transition top .5s
 
       .text-wrapper
         position relative
@@ -280,12 +277,9 @@ html, body
   top auto
   bottom 0
   z-index -1
-  transition-property z-index
   transition-delay .5s
   &:target
     z-index 1
-    transition-property z-index
-    transition-delay 0s
     .circle-big
       top 20%
       #joinus-scroller
@@ -304,7 +298,6 @@ html, body
     margin-left - ($circle-size / 2)
     position absolute
     background-color white
-    transition top .5s
     .back
       display block
       position absolute
@@ -336,7 +329,6 @@ html, body
       box-sizing border-box
       overflow-y auto
       overflow-x hidden
-      transition top .5s
       #joinus-wrapper
         .input.note
           color grey
@@ -356,7 +348,6 @@ html, body
             color grey
             bottom .5em
             left .5em
-            transition all .5s
           input[type=text]
             display block
             margin 0
