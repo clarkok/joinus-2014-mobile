@@ -19,10 +19,6 @@ body {
   background-color: #fff;
   left: 0;
   top: -2em;
-  -webkit-transition: top 0.5s;
-  -moz-transition: top 0.5s;
-  -o-transition: top 0.5s;
-  transition: top 0.5s;
   text-align: center;
   z-index: 10;
 }
@@ -41,10 +37,6 @@ body {
   height: 100%;
   position: absolute;
   top: -100%;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
   overflow: hidden;
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
@@ -199,10 +191,6 @@ body {
   box-sizing: border-box;
   left: 0;
   top: -100%;
-  -webkit-transition: top 0.5s;
-  -moz-transition: top 0.5s;
-  -o-transition: top 0.5s;
-  transition: top 0.5s;
 }
 .page .circle .text-scroller .text-wrapper {
   position: relative;
@@ -263,10 +251,6 @@ body {
   top: auto;
   bottom: 0;
   z-index: -1;
-  -webkit-transition-property: z-index;
-  -moz-transition-property: z-index;
-  -o-transition-property: z-index;
-  transition-property: z-index;
   -webkit-transition-delay: 0.5s;
   -moz-transition-delay: 0.5s;
   -o-transition-delay: 0.5s;
@@ -274,14 +258,6 @@ body {
 }
 #joinus:target {
   z-index: 1;
-  -webkit-transition-property: z-index;
-  -moz-transition-property: z-index;
-  -o-transition-property: z-index;
-  transition-property: z-index;
-  -webkit-transition-delay: 0s;
-  -moz-transition-delay: 0s;
-  -o-transition-delay: 0s;
-  transition-delay: 0s;
 }
 #joinus:target .circle-big {
   top: 20%;
@@ -304,10 +280,6 @@ body {
   margin-left: -500px;
   position: absolute;
   background-color: #fff;
-  -webkit-transition: top 0.5s;
-  -moz-transition: top 0.5s;
-  -o-transition: top 0.5s;
-  transition: top 0.5s;
 }
 #joinus .circle-big .back {
   display: block;
@@ -344,10 +316,6 @@ body {
   box-sizing: border-box;
   overflow-y: auto;
   overflow-x: hidden;
-  -webkit-transition: top 0.5s;
-  -moz-transition: top 0.5s;
-  -o-transition: top 0.5s;
-  transition: top 0.5s;
 }
 #joinus .circle-big #joinus-scroller #joinus-wrapper .input.note {
   color: #808080;
@@ -372,10 +340,6 @@ body {
   color: #808080;
   bottom: 0.5em;
   left: 0.5em;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
 }
 #joinus .circle-big #joinus-scroller #joinus-wrapper .input-text input[type=text] {
   display: block;
