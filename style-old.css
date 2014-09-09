@@ -42,6 +42,9 @@ body {
 .page:target {
   top: 0;
 }
+.page:target .circle {
+  display: block;
+}
 .page:target .circle .dep-logo {
   bottom: 0;
 }
@@ -145,6 +148,7 @@ body {
   border-color: #d7ccff;
 }
 .page .circle {
+  display: none;
   width: 1000px;
   height: 1000px;
   margin-left: -500px;
